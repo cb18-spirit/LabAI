@@ -8,6 +8,8 @@ from sentence_transformers import SentenceTransformer
 from dotenv import load_dotenv
 from google import genai
 from google.genai import types
+from auth import register_user, login_user
+from database import chat_history_collection
 
 
 # ============================================================
@@ -15,7 +17,6 @@ from google.genai import types
 # ============================================================
 
 load_dotenv()
-
 api_key = os.getenv("GEMINI_API_KEY")
 
 if not api_key:
@@ -45,13 +46,106 @@ st.set_page_config(
     page_icon="🔬",
     layout="wide"
 )
+if "logged_in" not in st.session_state:
+    st.session_state.logged_in = False
 
-st.title("🔬 AI Lab Assistant")
+if "user_name" not in st.session_state:
+    st.session_state.user_name = None
 
-st.write(
-    "Intelligent Electronics and Communication Systems "
-    "Experiment Diagnostic Assistant"
-)
+if "user_role" not in st.session_state:
+    st.session_state.user_role = None
+
+if "user_id" not in st.session_state:
+    st.session_state.user_id = None
+
+if not st.session_state.logged_in:
+
+    st.title("🔬 AI Lab Assistant")
+
+    st.write(
+        "Intelligent Electronics and Communication Systems "
+        "Experiment Diagnostic Assistant"
+    )
+
+    access_type = st.radio(
+        "Select Access Type",
+        [
+            "Student",
+            "Lab Technician",
+            "Public Repository"
+        ]
+    )
+
+    if access_type == "Public Repository":
+
+        st.session_state.logged_in = True
+        st.session_state.user_role = "public"
+        st.session_state.user_name = "Guest"
+        st.rerun()
+
+    auth_mode = st.radio(
+        "Authentication",
+        [
+            "Login",
+            "Register"
+        ]
+    )
+
+    if auth_mode == "Register":
+
+        name = st.text_input("Name")
+        email = st.text_input("Email")
+
+        password = st.text_input(
+            "Password",
+            type="password"
+        )
+
+        if st.button("Register"):
+
+            success, message = register_user(
+                name,
+                email,
+                password,
+                access_type.lower()
+            )
+
+            if success:
+                st.success(message)
+
+            else:
+                st.error(message)
+
+    else:
+
+        email = st.text_input("Email")
+
+        password = st.text_input(
+            "Password",
+            type="password"
+        )
+
+        if st.button("Login"):
+
+            success, user = login_user(
+                email,
+                password
+            )
+
+            if success:
+
+                st.session_state.logged_in = True
+                st.session_state.user_name = user["name"]
+                st.session_state.user_role = user["role"]
+                st.session_state.user_id = str(user["_id"])
+
+                st.rerun()
+
+            else:
+
+                st.error("Invalid credentials")
+
+    st.stop()
 
 
 # ============================================================
@@ -437,7 +531,24 @@ Answer the student's question clearly.
 
     return None
 
+with st.sidebar:
 
+    st.success(
+        f"Welcome {st.session_state.user_name}"
+    )
+
+    st.write(
+        f"Role: {st.session_state.user_role}"
+    )
+
+    if st.button("Logout"):
+
+        st.session_state.logged_in = False
+        st.session_state.user_name = None
+        st.session_state.user_role = None
+        st.session_state.user_id = None
+
+        st.rerun()
 # ============================================================
 # MODE SELECTION
 # ============================================================
