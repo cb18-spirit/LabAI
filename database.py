@@ -15,3 +15,4 @@ db = client["ai_lab_assistant"]
 
 users_collection = db["users"]
 chat_history_collection = db["chat_history"]
+technician_records_collection = db["technician_records"]

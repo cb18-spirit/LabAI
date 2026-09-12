@@ -1,0 +1,252 @@
+[
+  {
+    "chunk_id": 0,
+    "page": 4,
+    "text": "Wf Semester\n\nS3EC:\nSILCLOL Analog Electronic Circuits Lab —\nCircuit Diagram: Packed Bridge No Expe\nP)\n230V/50HZ 3 Aim:\nih App:\n}\nDesign: Ty |\nGiven, Output Voliage (Vc) = _5V_ and Output Current (Ipc) = ama 78XX\nand ripple (y) at the output of filter should be less than or equal to\nRL= Voe/ Ipc = 8] Som Q = (o0_-7.\nPa. = Voc 4c = 5 W=o.a5y Vp Gnd Ofp\nHence, gh toa fo) tow Proc\n1\nDesign of Regulator 2\nExample: 3\nAssume Voc = 5V and Ipc = 50 mA, Three terminal IC regulator 7805 is chosen which can\nwithstand up to 1A output current with suitable heat sink. 4\nFor 78XX regulators, Vyp > Voce + 2V, Vyp = lo Vv -\nLet Co=0.1 uF (To improve stability and transient response ). 5\nR=( Vo- Vr)/ ILE, For an LED Vr= ls V, lLep = 20 mA\nTh reforeR= (tS Q ZS 220m\nWor\nPr=W/R= \\S-vsy we ©.o5H\nVero.\nR=_2209/ gauw ;\naL on >\nx\nDesign of Filter ‘ S ;\n8 ; : Fos eno TO = Tp ATe iTS Bem 4 4a 4 \\.\nThe load resistance seen by the filter capacitor, Ry'= Vyp/ (Ipe + ILep + 1g) = Lo Q Us oo\nWhere, Io = 4.2 mA and tip 20 mA oe: i\nCH1/(4¥3 fyR,') = 1 F/2V_y =\n| ( yRv’) =e /2 Vm You. Gye — Pye\n| x 2 Soxe.05 x14 9 6\nDesign of Rectifier\nVoc = Vin — [lpc'/ (4 fC)] where Voc = Vup and Ipc! = Inc + lLep + lg\nVin = SOAV a"
+  },
+  {
+    "chunk_id": 1,
+    "page": 4,
+    "text": "20 mA oe: i\nCH1/(4¥3 fyR,') = 1 F/2V_y =\n| ( yRv’) =e /2 Vm You. Gye — Pye\n| x 2 Soxe.05 x14 9 6\nDesign of Rectifier\nVoc = Vin — [lpc'/ (4 fC)] where Voc = Vup and Ipc! = Inc + lLep + lg\nVin = SOAV and Vins = Vm / V2 = is v= 0 “IW Fag 1\nChoose a transformer of rating 0 - Vins With current rating greater than Ipc’ ‘oes\nep\nDepartment of E&C Engg."
+  },
+  {
+    "chunk_id": 2,
+    "page": 5,
+    "text": "Rw _ Pe ee\n\n2\n\nwave pel \\walta (rev tree Cieaii Lak\n\nAL) Semventer\nRig up Experiments\nyout Nat Date;\n\nRegulated DC Power Suppl\n\nbret\n\nagar To dosign a regulated DC power supply for the given specifleation,\nApparat Required:\n\n‘S[ eee\n\nResistors & ie apacitors\nRegulator IC\nAbD i)\nof Malate\n\nRange Quantity\n\nProcedures\n1, Components / Equipment are tested for their good working condition,\n\n2, Connections are made as shown in the circuit diagram,\n3, Observe different waveforms on CRO (Note: Do not observe both ac i/p and o/p\n\nwaveforms simultaneously).\n4. Measure Vpc. Vir using multimeter in de mode and Vep-p across filter capacitor using\n\nCRO,\n§. Calculate the ripple factor,\n\n4\n\nY VGA"
+  },
+  {
+    "chunk_id": 3,
+    "page": 6,
+    "text": "MH Somes,\nSIECLOL Anutog Electronle Clreults Lab a\nrenee eee ec ne ereeneneenennnn ena\nWaveform:\n\nwt\n\nVup > Unregulated DC voltage\n\nTabular Column:\n\nTo measure ripple factor\n\nVerms = Vepp/ 23\nin Volt\n\nNote: Design a regulated de power supply to obtain an out\n\nPut voltage, Voc = 5V, Output\ncurrent, Ine\n\n= 100mA and ripple, y at the output of capacitor filter = 0.05\n\nDepartment of E&C Engg.\n\nSIT, Tumakury — 572 103"
+  },
+  {
+    "chunk_id": 4,
+    "page": 7,
+    "text": "' ynalog Eleetronle Circuits Lab\n0\n\nett! a\"\nA po Mapping\n\nHl Semester\n\nStatement\n\na suitable electronic device and\nrig-up, demonstrate the various\nuits for given specifications\n\njoentity\ndesign\nanalog clr’\nand in\nment (To be assessed by student after the\n\nterpret the results.\n\nAssess\n\nTaentify suitable electronic device and\n\ndesign. rig-UP demonstrate the various\n\nanalog circuits for given specifications\ninterpret the results.\n\nAttalament levels: 1- Slight (Low), 2-Moderate (Medium), 3-Substantial (High)\n\n(pa-l: Engineering Knowledge, PO-2: Problem analysis, PO-3: Design/Development of\n\nSolutions, pa-4: Conduct Investigations of Complex Problems, PO-5: Engineering Tool Usage,\npo-6: The Engineer and The World, PO-7: Ethics, PO-8: Individual and Collaborative Team\n“Work PO-9: Communication, PO-10: Project Management and Finance, PO-11; Life Long\n\nLearning)\n\nInference:\n\nDate: Staff-in-charge\n\nSIT. Tumakuru — 572 103"
+  },
+  {
+    "chunk_id": 5,
+    "page": 8,
+    "text": "~ TES Gy\nhe = Toe. i a\nSSHCLGL Anatow ilectvante Clreults Lal ale acne\n\n~ S3ECL\nClreult Diagram:\n\nExpe!\n\nAim:\nApp\n\nPr\n\nVo\n\nCross over distortion\n\nTabular Column:\n\nVi ep = Je 6 V, Vec= iY) V an g Vv\n\n% N=Pac / Poc\nPh. 210K 13\n\nBee (¥-46)\nXwr>\n\nCRi\n=O-0I31 | 9,1 59x03 69997: 9\n=0200F16 ‘|"
+  },
+  {
+    "chunk_id": 6,
+    "page": 9,
+    "text": "ee SSS ee\n\ns3ECL01 Analog Electronic Circuits Lab {fi Semaster\n\nExperiment No. 2 Date:\nClass B Push Pull Power Amplifier ,\n\nAim: 10 determine the efficiency of class B push pull amplifier and to find the optimum load.\n\nApparatus Required:\n\nTransistor AD149 and 2N3055 | cach\n\n2. _| Resistors and Capacitors As per design -\n3.__| Mili ammeter | 0-20 mA 01\n\n|\n|\nMultimeter | Ol\nCRO Adaptors é | 03\n\nProcedure:\n1. Components / Equipment are tested for their good working condition.\n2. Connections are made as shown in circuit diagram.\n3. Keep RL = 1KQ, and adjust the amplitude of input signal to obtain maximum distortion\nless output waveform.\n\n4. Calculate Pac and Puc and calculate efficiency.\n\nDNenartmant af FAC Enuva. xz\n\nSir, Tumakuru — 572 103"
+  },
+  {
+    "chunk_id": 7,
+    "page": 10,
+    "text": "EY. See\n\nSahl Anutog Bleeteonte Cheatin bash\nBILIC 1 be Tih el ab EAT IH Seimentur\n\nno\n\nResult\nMaximum efficleney = G07]\n\nCO «PO Mapping\n\neneesseiieustiliauniMan ait ie Basie oc NSE ON UR SH\n\nArticulation\n\nco Statement\n\n| Pos |\n| Pos\nTrost\nPOs\n| Pos |\nPOT |\nPOs;\n| POS |\ntrom\niron\n'PSo1\n\nsoz\n\nIdentify a aultable electronte device and\ndesign, rig-up, demonstrate the various\n\nanalog elreults Jor glven specliieations a} 3\nand interpret the results,\n\nSelf Assessment (To be assessed by student alter the completion of experiment)\nidentify a sultable electronic deviceand| | | | ] Temes | es\n\ndesign, rig-up, demonstrate the varlous\nanalog circults for given specifications\nand interpret the results,\n\ncol\n\ncol\n\n[ae ee es nn re\n\nAttainment levels: 1- Slight (Low), 2“Moderate (Medium), 3-Substuntlal (High)\n\n(PO-1: Engineering Knowledge, PO-2: Problem analysis, PO=3: Design/Development of\n\nSolutions, PO=4: Conduct Investigations of Complex Problems, POS: Engineering Toot Usage.\n\nPO-6: The Engineer and The World, PO«7) Ethies, PO-8: Individual and Collaborative Teant\n\nWork, PO-9: Communication, PO-10: Project Management and Finance, POLL: Life Long\n\nLearning)\n\n{nference:\n\nWAN rye\n\nDate:\n\nee nian"
+  },
+  {
+    "chunk_id": 8,
+    "page": 10,
+    "text": "nd The World, PO«7) Ethies, PO-8: Individual and Collaborative Teant\n\nWork, PO-9: Communication, PO-10: Project Management and Finance, POLL: Life Long\n\nLearning)\n\n{nference:\n\nWAN rye\n\nDate:\n\nee nian — a"
+  },
+  {
+    "chunk_id": 9,
+    "page": 11,
+    "text": "WH Serna,\nid\nS3UCLO! Analog Electronic Ciroults Lab\n\nChreult diagram:\n\nRKO 1 Kg\n\n=\n\nsi “15 V\n\nDesign:\nSpecification:\nDesign a 4 bit R-2R DAC for an output voltage, Vy = 5V, when the input is 10 (i.e.,\nbinary no, 1010),\nne D3 Dz Dy Dy\n(10V0=C1 0-4 9 43\n\n~~ Therefore D;= 1 (MSB), D, =0, D,\n\n= 1, Do=0(Lsp)\n\n%\noF\n\nae\nAy e829, @ Ay [Pan Ke (-x2 ed\n‘ R IKQ) R\nRiv.\nRee D430 nan +8D,)\nR 16 2\nRe 5\nBe ee anal\nR 16 (0+2+0+8)\nR, 8\nR 5 OR, SBR\n\nBELLA\n—e\n\nExpert\n\nAim:\n\ninput |\n\nAppa\n\nNot\n\n—\n\na WN"
+  },
+  {
+    "chunk_id": 10,
+    "page": 12,
+    "text": "FE Semester\n\nS3ECLOI Analog Electronic Circuits Lab\nDate:\n\nExperiment No. 3\n4-BIT R-2R DIGITAL TO ANALOG CONVERTER\n\nAim\n\nTo design 4 bit R-2R ladder DAC using Op-Amp for an output voltage of 5 V when the\n\ninput is 10 (Binary 1010).\n\nParticulars Specification Quantity |\n\nResistors As per design Z\nheer ee\n3. | Malin Feomecing wees [|__| 0181\n\nApparatus:\n\nProcedare:\n\n{. Connecti\n\n2. Digital input data is given at D3.\nmeasured.\n\n3. Tabalate the readings.\n\nions are made as shown in the circuit diagram.\nDy, Di, Do and corresponding analog output voltage Vo fs\n\n{. Da, Dy, DB: & D; are binary input.\n\nVo is the analog output.\n\n3. Binary inputs Do. D,. Dz & D; can take either the value “O° or “1”.\n4. Binary input D, (i = 0 to 3) can be made ‘0° by connecting the i/p to\n\n“lL by commecting to +5 V.\n\ned\n\nground and can be made\n\nLogic 0 > OV\nLogic | 3 +5V"
+  },
+  {
+    "chunk_id": 11,
+    "page": 13,
+    "text": "| i\n| IWS\n| S3ECLO1 Analog Electronic Circuits Lab Mester 3ECLU\n| | Observation: 70-1\n1 | alog O/P\n' if Binary Inputs Analog O/P se fetta a\n| i! Decimal Vo(volts) o(vo Lic\nI] he Theoretical Practical\n| \\ values values es\nI | ee\nWH y lz\nWl di E\nnt i ees\nMt aoe eae a\n| {| ies a Se Te a\nHl Cae eee és\n\\ Fes Ce eae\ntts {as Ea\nrept es ft\n- eee No See -\nCs eee = PC\nPits ms\nHi Liiiegonel aes ;\nee\n5S\nBEA eS aa :"
+  },
+  {
+    "chunk_id": 12,
+    "page": 14,
+    "text": "EE —————_\n\nHl Semester\n\nS3ECLO1 Analog Electronic Circuits Lab\n\nCO - PO Mapping\n\nArticulation\n\nStatement\n\nIdentify a suitable electronic device and\ndesign, rig-up, demonstrate the various\nanalog circuits for given specifications\nand interpret the results.\n\ncol\n\nSelf Assessment (To be assessed by student after the completion of experiment)\n\nIdentify a suitable electronic device and\ndesign, rig-up, demonstrate the various\nanalog circuits for given specifications\n\nand interpret the results,\n\nAttainment levels: 1- Slight (Low), 2-Moderate (Medium), 3-Substantial (High)\n\n(PO-1: Engineering Knowledge, PO-2: Problem analysis, PO-3: Design/Development of\nSolutions, PO-4: Conduct Investigations of Complex Problems, PO-5: Engineering Tool Usage,\nPO-6: The Engineer and The World, PO-7: Ethics, PO-8: Individual and Collaborative Team\n\nWork, PO-9: Communication, PO-10: Project Management and Finance, PO-11: Life Long\nLearning)\n\nInference:"
+  },
+  {
+    "chunk_id": 13,
+    "page": 15,
+    "text": "ina\n\nS3ECLOI Avatog Ulectronie Circatits Lab\nCircuit diagram for 2-bit flash type ADC\n\nObservation:\n\n;\n\nAnalog U/P\nVin (volts)\n\n2-Bit Flash\nAnalog to Digital\n\nSECLA As\n—ae\n\nxperime\n\nsim:\n\n\\pparat\n:\nLL\n\n-\n\nL\nProcedt\n1. Comy\n2. Conn\n3. App’\nco-P\n\n(PO.\nSolut\nPO-t\n\nWor.\n\nLear\n\nInfe"
+  },
+  {
+    "chunk_id": 14,
+    "page": 16,
+    "text": "SEC LOL Analog Ebectroaic Curcwats Lab U1 Semester\nExperimeat Na 4 Date:\n2-BIT ANALOG TO DIGITAL CON VERTER\nAim:\nTo design 2 bit flash ype ADC using Op-Amp.\n\nApparatus:\n\nProcedure:\n1, Components / Equipment are tested for their good worki\n\nng condition.\n\n>. Connections are made as shown in the circuit diagram.\n\n3. Apply input analog voltage (Vin) and note down digital output.\n\nCO - PO Mapping\n\nArticulation\n\nStatement\n\nIdentify a suitable electronic device and\ndesign, rig-up, demonstrate the various\nanalog circuits for given specifications\nand interpret the results.\n\nSelf Assessment (To be assessed by stude\n\nIdentify a suitable electronic device and\ndesign, rig-up, demonstrate the various\nanalog circuits for given specifications\nand interpret the results.\n\nAttainment levels: 1- Slight (Low), 2-Moderate (Medium), 3-Substantial (High)\n\n(PO-l: Engineering Knowledge, PO-2: Problem analysis, PO-3: Design’Development of\nPO-4: Conduct Investigations of Complex Problems, PO-5: Engineering Tool Usage.\nPO-7: Ethics, PO-8: Individual and Collaborative Team\n\nand Finance, PO-11: Life Long\n\nSolutions,\nPO-6: The Engineer and The World,\nWork, PO-9: Communication. PO-10:; Project Management\n\nLearnin"
+  },
+  {
+    "chunk_id": 15,
+    "page": 16,
+    "text": "Usage.\nPO-7: Ethics, PO-8: Individual and Collaborative Team\n\nand Finance, PO-11: Life Long\n\nSolutions,\nPO-6: The Engineer and The World,\nWork, PO-9: Communication. PO-10:; Project Management\n\nLearning)\n\nInference:\n\nStaff-in-charge\n\nDate:\n14 SIT, Tumakuru — 572 103\n\nnr... EC Enee."
+  },
+  {
+    "chunk_id": 16,
+    "page": 17,
+    "text": "TH Sem,\n~ a]\n\nSIECLOL Analog Electronic Circuits Lab , 7 a\n\nCircuit Diagram:\nDifferential Mode\n\nDifferential gain,\n\nAgewtle For Rp = R= R, = R,\n\nK-v,\nR i’)\nA, =-£) 142% sae tS ASR\nRR, fe\n\"o=-3,-V)=—3V, where V, = ¥; -, ey,\na L\n: {4\nTabular Column: 7\n\n[ee\n: : A Vo Theoretical\nV1 in Volt V2 in Volt in Volt\n\nVo Practical\n\n7\nin Volt 5\n\n——_—__—_______|\n\n|\nAverage Ad = —2- 05 5\n\nDepartment of ERC Engg. 15 SIT, Tumakuru —572 103\n\nL. : im\n! Ved\n2: 2.2L\nee, 3,4"
+  },
+  {
+    "chunk_id": 17,
+    "page": 18,
+    "text": "a eee\n4 toat BAL teem tHE IY regr rar \" ail\nif myr'> wy \\ os\n\nmip LOL Aaalon Flectennie ¢ ireita bake ee _ Me enmeer\nye aperinent No, § Brite.\ninstrumentation Amplifier / 2d an we om fies\nAim 10 dusigh and teat inatrurientation sinplifler for « given mar wiih Aahaninitian os\nyalue of CMR,\n\nApparatus required) ae Sa daleasias\n\nfl. Apparatus /\n\nNG). Components |.\n1 IC HAA\n\nResistors ;\n_| Multimeter\n\np rocod ore:\n\nJ, Con\n4, Inputs Vi and V; are varied in steps and Vo\n\n4, Differential gain is calculated and verified with the designed gain.\n4, For common mode, connections are made as shown in circuit diagram, V is varied in\n\nsteps (2V, 3V etc). Vo is measured using multimeter.\node gain and tabulate all the readings. Compute CMBR from\n\nnections are made as shown in circuit diagram of for differential mode.\n\nis measured using multimeter and talnuiated.\n\n5, Calculate the common m\n: obtained differential and common mode gains."
+  },
+  {
+    "chunk_id": 18,
+    "page": 20,
+    "text": "APC HOE Amotin Hlevteanie Cheeta hab 11 Sermweter\n\nHtonull |\nilferwrtlal galn, Ad *\nCumman mode pals AG,\nComnton mode rejeutian tuto, CMR &\n\nCO» PO Mapping\n\nANAS ENLACE CO TT a\n\n| Artiquiation\nseccentna een CaSO\nStatement\n\n- identliy a sultab @ vluctronie device and\ndevlgn. rigeup, demonstrate the various\nanalog clroulls for given specifications\n\nand Interpret the results,\nSolf Assessment (To be assessed by student after.the\n\nIdentify a suitable electronic device and\ndesign, rlg-up, demonstrate the various ;\nanalog clroulis for given specifications\nand Interpret the results.\n\nAttainment levels: 1- Slight (Low), 2-Moderate (Medium), 3-Substantial (High)\n{\nPO-2: Problem analysis, PO-3: Design/Development of\n\n(PO-1; Engineering Knowledge,\nring Tool Usage,\n\nSolutions, PO-4: Conduet Investigations of Complex Problems, PO-5: Enginee\n\nPO-6: The Engineer and The World, PO-7: Ethics, PO-8; Individual and Collaborative Team\n\nWork, PO-9: Communication, PO-10: Project Management and Finance, PO-I1: Life Long\n\nLearning)\n\nInference:\n\nDate: Staff-in-charge\n\n0 IDS\nSIT, Tumakuru — 572 103\n\nDepartment of F&C Engg. 18"
+  },
+  {
+    "chunk_id": 19,
+    "page": 20,
+    "text": ": Life Long\n\nLearning)\n\nInference:\n\nDate: Staff-in-charge\n\n0 IDS\nSIT, Tumakuru — 572 103\n\nDepartment of F&C Engg. 18"
+  },
+  {
+    "chunk_id": 20,
+    "page": 21,
+    "text": "Wy Sem,\nEdition Kit. ~~ ec!\njectranie Circulls Lab Discovery ny\n\nnts using An\n\nSIECLOL Aaalor E me\n\n= Experime\n\nIncroduction\n\nCon\n\n. _ Dise\nThe Digilent Analog Discovery 2, developed in eonisiioyan with i heel\nmultifunction instrument that allows users to measure visualize, ane record, an i iden\nmixed signal circuits of all kinds. The low cost Analog Discovery 2 is soe a i i iD ppl\nyour pocket, but powerful enough to replace a stack of lab equipment, providing ey ainesrng\nidan hobbyists, and electronics enthusiasts the freedom to work with analog and digital\ncircuits in virtually any environment, in or out of the lab. The analog and digital inputs and\nourputs can be connected to a circuit using simple wire probes; Alternatively, the Analog\nDiscovery BNC Adapter and BNC probes can be used to connect and utilize the inputs and\n\nourputs. Driven by the free Wave Forms software, the Analog Discovery 2 can be configured to\n\nwerk as any one of several traditional instruments, which include:\n* Two channel oscilloscope (IMQ, +25V, differential, [4bit, 100Msample/sec, 30MHz+\nbandwidth with the Analog Discovery BNC Adapter Board)\n\nTwo channel arbitrary function generator (£5V, 14bit, 100Msamp"
+  },
+  {
+    "chunk_id": 21,
+    "page": 21,
+    "text": "Two channel oscilloscope (IMQ, +25V, differential, [4bit, 100Msample/sec, 30MHz+\nbandwidth with the Analog Discovery BNC Adapter Board)\n\nTwo channel arbitrary function generator (£5V, 14bit, 100Msample/sec, 12MHz-+\nbandwidth with the Analog Discovery BNC Adapter Board)\n\nStereo audio amplifier to drive external headphones or 5\n\npeakers with replicated AWG\nsignals\n\n16 channel digital logic analyzer (3.3V CMOS, 100Msample/sec)\n\n16 channel pattern generator (3.3V CMOS, !00Msample/sec) —_\nott i\n\nMae."
+  },
+  {
+    "chunk_id": 22,
+    "page": 22,
+    "text": "ECLQE Anatog Ptvetronte Cleonits bah\nSMLCh\n\nUY Besgester\n\nco stem tobe — wrt\nHebe and Js © perteet tor\ni 3 s buttons, mwltches, at\nob virtual dlattal VO telus\n16 channel virtua\ne\n\npaining applications id ace\n° net natn Alyltal lgger stanals for Hukdings ia ee a es mit\ne Two programmable power supplies (0..0bSV . O..e5V), a He\ncurreatand power depend on the Analog Discovery 2 powerlng ehe iid\n250mW max for cach supply or SOOMW total when powered Mrough Us tine\n700MA Max or 2.1 max for each supply when using an external wall power supply\n¢ Single channel voltmeter (AC, DC, h2$V) arg ee\n* Nobvork analyzer Bode, Nyquist, Nichols transfer diograms ofa circuit. Range: Lz to\n1OMblz\ne Spectrum Analyzor\nSNR, THD, Cte.)\n\n~ power spectrum and spectral Meusuroments (noise Hoor, SPDR,\n\nDigital Bus Analyzers (SPI, 2C, UART, Parallel)\n\nConnecting an Analog Discove\n10)\n\nry Unit\n\nnee Wave Forms application is installed\n\nand is functioning on the computer,\nDiscow\n\nAnalog\nery unit can be connected to the co;\nForms is executed On a computer With\n\nidentify the device,\n\nMputer with the USB cord Provided. Wheneve\n\nt Wave\na\n\ncompatible device Connected, it will automatically\nthe device serial humber in th"
+  },
+  {
+    "chunk_id": 23,
+    "page": 22,
+    "text": "co;\nForms is executed On a computer With\n\nidentify the device,\n\nMputer with the USB cord Provided. Wheneve\n\nt Wave\na\n\ncompatible device Connected, it will automatically\nthe device serial humber in the bottom right area of the\nWi\n\nand display\napplication window as shown belo\n[a2 Waveforms (nen\n\nFOS (New wor!\n\n. Lor more information vale\nVU Pbseryations ACS Welcome on\n‘ )"
+  },
+  {
+    "chunk_id": 24,
+    "page": 23,
+    "text": "S3ECLO1 Analog Electronic Circuits Lab\n\nDevice pin-out\n\nTrigger In (Gray) : ahs,\n\n1\ntk\na\n\n‘ Ground (Black)\n\nWaveform Generator 1 (Yellow)\nV+ Power Supply (+5VDC) (Red)\n\nDigital 1/0 Signals\nGround (Black) (Pink, Green,\n\nPurple, Brown)\nScope Channel 2 Positive (Blue)\n\nScope Channel 4 Positive (Orange)\n\n24 ry\neo © ed\nv+w1#Tlo0 123 4 65 6 7\n\nV-W26TO B 9 10 1112 13:14 15\ni i\n\nScope Channel 1 Negative (Orange/White)\n\nScope Channel 2 Negative (Blue/White)\n\nDigital /O Signals\n(Pink, Green,\nPurple, Brown, all\nwith White Stripes)\n\nGround (Black) J}\nV- Power Supply (-5VDC) White) ——---\nWaveform Generator 2 (Yellow/White)\n\nGround (Black)\n\nTrigger In (GrayMWhite) one?”"
+  },
+  {
+    "chunk_id": 25,
+    "page": 24,
+    "text": "eee\n\nIH Semester\n\ns3eCL01 Analog Electruale Circults Lab\n\nExperiment No. 6\nClippers and clampers\n\nAim: TO design Clippers for the given specification.\n\nApparatus Required:\n\nNo.\n\nrE bigis UNA seg a ee\nat Resistor & capacitors Asppndenien. [+\nPil amigoeenh) cee eae\n\nProcedure: Clippers\n\n1, Components / Equipment are tested for their good working condition.\n\n2. Connections are made as shown in the circuit diagram.\n\n3. Apply a sine wave of amplitude greater than the designed clipping level with frequency\n500 Hz and observe the output wave form.\n\n4. Observe the transfer characteristic.\n\n5. Measure the clipped voltage and compare with the designed value,\n\nProcedure: Clampers\n1. Connections are made as shown in the circuit diagram.\n2. Apply a square wave / triangular wave / sine wave input of amplitude 10 V peak to peak\nand frequency of | kHz\n3. Observe the input and output waveform.\n\n4. Measure the clamping level and compare with the designed value\n\nLapp OH\nKS\n\\+ rw 2+\n\\ov -pt? po)\nte vec (Red | Phite)\na\n2\nGND\n\nDepartment of E&C Eng\ng.\neo 22 SIT. Tumakurn — 377 tar"
+  },
+  {
+    "chunk_id": 26,
+    "page": 25,
+    "text": "1H Semeay\nS3ECLOI Analog Electronic Circuits Lab bie\n\nCireuit Diagram: Clippers\n\non\n\n|. To remove positive peak above some reference level (Va +V,)\n\n+ sou\n\n+\ni 1+ R 2\n\nA K\nbelie AY ee a\nVp + Vy, ve > 3,024\nVi2026 3\nv Vee3 AU oe\n\n- Vt ez PE ea\n\n2. To remove Positive peak above some reference level (VeitV,) and negative peak above some\nrefzrence level (-Vro-Vy)\n\nR\n\n10 V p-p\n' 1 kHz Ml\n\n1k\n\nf"
+  },
+  {
+    "chunk_id": 27,
+    "page": 26,
+    "text": "s3ECLOI Analog Electronic Circuits Lab\n\nCircuit Diagram: Clampers\nPositive Clampers:\n\n|, Negative peak clamped to -V, level\n\nWi\n\n40V P-P J KHz\n\nI+\nwi ‘\n40V P-P J 1KHz vi\n4\n\n3. Negative peak clampe\n\n1+\n\nwil\n10V P-P / 1KHz\n\nNote : The Analog Discovery-2 kit connections to be followe'\n\nfor negative clampers also.\n\nCc\nae\nuf\nD\nR\n+/V+\nvR =\naL}\n\n2+\n\n100K\nVo\n\n-VR-Vy\n\nHH Semester\n\nd to negative reference level (-VR-Vy)\n\nAp\n\nane\n\ndas given in positive clampers\n\nSIT, Tumakuru — 572 103\n\nDepartment of E&C Engg.\n\n24"
+  },
+  {
+    "chunk_id": 28,
+    "page": 27,
+    "text": "PB\n\nf\n|\nq\n\nS3ECLOL Analog Electronte Cirenits Lab 18 Senne,\nseca Geen NA Neg\nNegative Clampers:\n\n4. Positive peak clamped to Vy level\nCc\n\nfuf\n\n1UVP-P/ {KHz CY) vi D 100K\n\n10V P-P /1KHz\n\nTIVP-P st KHz\n\nfa\n\n<—_\n\n= Ss BYE\n\n~~] 2 wm eS\n\n— yD\n\nCf fo Cw\n\nyy»"
+  },
+  {
+    "chunk_id": 29,
+    "page": 28,
+    "text": "| aa\n\nS3ECLOI Analog Electronic Circuits Lab IH Semester\n\nDesign: Clippers\nExample — 1: Design a clipping circuit to pass the positive peak above the reference level\n2Vv (Circuit 1)\n\nVa+Vy=2V Assume the diode to be silicon make then Vy = 0.6 V\n\nThen Va=2 -0.6=14V\n\nAssume R, = 100 KQ ‘nd Rp=10Q 7\n\npice eS\nThen R= VR, Rr =1KQ\nyeas\n\nExample — 2: Design a clipping circuit to remove positive peak above + 3 V negative peak\n\nabove - 4 V (Circuit 2)\nVaitVy=+3 V Assume the diode to be silicon make then V,=0.6 V\n\nVai=3-0.6=24V Mo\n-Vpo-Vy==4V\nVa =24+0.6=-3.4V os\nVeo = 3.4 V ae\n\nAssume R, = 100 KQ and Ry= 10.Q\nThenR=VR/Rp =1KQ\nDesign: Clampers\nExample — 1: Design a clamping circuit to clamp the negative peak to +1V ( Circuit 2 )\nVa- Vy=1V Let the diode be silicon make then V, = 0.6 V\nThen Va=1+0.6=1.6 V\nFor aclamper RC >> T let RC = 100 T\nAssume f= | kHz, hence T = | ms, choose C = | p f\n\nThen R = 100 KQ\n\nExample — 2: Design a clamping circuit to clamp the positive peak to +2V ( Circuit 3 )\n: VetV,=2V Let the diode be silicon make then V, = 0.6 V\n| V_=2-0.6\nVe=14V\nFora clamper RC >> T, let RC = 100 T ;\nAssume f= 1 kHz, hence T = 1 ms, choose C = 1 p f\n\nThen R = 100 KQ\n\nDepartment of E&C Engg."
+  },
+  {
+    "chunk_id": 30,
+    "page": 28,
+    "text": ",=2V Let the diode be silicon make then V, = 0.6 V\n| V_=2-0.6\nVe=14V\nFora clamper RC >> T, let RC = 100 T ;\nAssume f= 1 kHz, hence T = 1 ms, choose C = 1 p f\n\nThen R = 100 KQ\n\nDepartment of E&C Engg. 26 SIT, Tumakuru — 572 103"
+  },
+  {
+    "chunk_id": 31,
+    "page": 29,
+    "text": "OO LLL LLL\n\nye\n\ndearest EL A STN CN ATL\nS3ECLOL Analog Electronic Cireults Lab\nS3KC\nResult:\n\nHo\n\nee a ene\n\nTi A. Shunt Clippers\n\nreference level (Vp +V.\nTo remove positive peak above some\nreference level (VaitV,) and negative\n\npeak above some reference level (-Va2-\nVv\n\nVaitVy = SY\nVar V, eM\n\nDesigned\n\nC. Negative Clampers\n\n| 1. [Positive peak clamped V; level]\nae Positive peak clamped to positive\nreference level (Vp+V.\n3\n\"_| reference level “VatV.\n\nDevertment of ERC Beg\n\n: Observed\n[crt] Decne\n\n; Negative peak clampedto Vylevel_[-Vj=_-orAV | “a.\nNegative peak clamped to Ositive :\n\n: Z3iny\n\n__| Negative peak clamped to negative [ves -2v | Jey?\n\nreference level (-Va-V. ie gh\n\nDesigned\n\ni [at Circuit Clipping level\n\n; 0,\n\ni rs To remove positive peak above some Vet¥,= BV 3,0%4\nLey\n\n———\n\ne\n\n—\n\na ee"
+  },
+  {
+    "chunk_id": 32,
+    "page": 30,
+    "text": "ee\n\noR NeCTRNLE WL onaeNTIRUNREROMATET\ny - ste Pe AD ERR Si TSMR eR\ncerns ienonmmegentsots\n\nmone Ll Analog Cleetranie €treditn Lab\n\nco. PO Mapping\n\nArticulation\n\nco Statement\nd2\n\nJae modern (ool to design and test the\n\nCO. worklug principle of analog electronie\n\nolreult,\nsommment (To be assomied by student after the completion of experiment) :\n\nUse modern tool 10 design and test the BEREECeaROeae\n\nCO2 | working principle of analog electronic\nAttalnment levelss 1- Slight (Low), 2-Moderate (Medium), 3-Substantial (High)\n\nBoll As\n\nclroults,\n\nOl; Engineering Knowledge, PO-2; Problem analysis, PO-3: Design/Development of\n\n(\nSolutions, PO-4! Conduet Investigations of Complex Problems, PO-5; Engineering Tool Usage,\nPO-8: Individual and Collaborative Team\n\npo.6; The Engineer and The World, PO-7: Ethles,\nI: Life Long\n\nWork, PO-9: Communication, PO-10: Project Management and Finance, PO-1t\n\nLearning)\n\nnference:\n\nCPA cnarge"
+  },
+  {
+    "chunk_id": 33,
+    "page": 31,
+    "text": "S3KCLO1 Anatog Electronic Circuits Lab\n\nCircuit Diagram:\n\n10K\n\nWaveforms:\n\nOutput at node A\n\nOutput at node B rt\n\nDesign:\nGain of +ve half cycle =\n\nPied R,\nGiven A = |=—-\n\n1\n\nChoose R = 10KQ\n\nR\n\nGain of -ve half cycle = —2\n\nR\n\n1\n\nAssume Rj= 10K Q then Ry =R,,= R, =10KQ\n\nDepartment of E&C Ens,\n\n29\n\nSIT, Tumakuru - $72 103"
+  },
+  {
+    "chunk_id": 34,
+    "page": 32,
+    "text": "{1} Semater\n\ns3ECLO! Analog Electronic Circuits Lab\nDate:\n\nExperiment No. 7\n\nPrecision Rectifier\n\nAim: TO Design & Test Precision rectifier for given specifications.\n\nApparatus required:\nSI. Apparatus /\n\n[_1.__| Analog discovery kit fl, Stan |\nfe OPA he ee 2\nDiode (1N4007) ree ne is\n\nResistors\n\n: ple\n\nteach\n\nAs per design\n\nProcedure:\n\nConnections are made as shown in circuit diagram.\n\nA sinusoidal input of frequency 100Hz and amplitude 0.5V is applied from the analog\ndiscovery kit.\n\n3, Rectified output signal is observed.\n\n4, Input and output voltage levels are noted.\n\n5, A plot of Vo v/s Vi is observed by feeding V; to channel - | and, to channel - 2.\n\nVe} > 100mv\n\nResults: 4\nGain, Av (Theoretical) = y y\n> Ord\nGain, AV (Practical) = 106208 1.06 nC D/P J ae\nCO - PO Mapping 100 YK\nArticulation\nsjsjslais|sis/8/8 isis sig\nco Statement RIE|L|E/E/E/E RRS Sze\nUse modern tool to design and test the\nCO2 | working principle of analog electronic | 2 2 2 a\\2 2/2\nL circuits |_|\n\"Self Assessment (To be assessed by student after the completion of experiment)\nUse modern tool to design and test the\n, C02 working principle of analog electronic\n! circuits | L L bce)\n\nq Attainment levels: 1- Slight ("
+  },
+  {
+    "chunk_id": 35,
+    "page": 32,
+    "text": "o be assessed by student after the completion of experiment)\nUse modern tool to design and test the\n, C02 working principle of analog electronic\n! circuits | L L bce)\n\nq Attainment levels: 1- Slight (Low), 2-Moderate (Medium), 3-Substantial (High)\n (PO-1: Engineering Knowledge, PO-2: Problem analysis,\nSolutions, PO-4: Conduct Investigations of Complex Problems, PO-5: Engineering Tool Usage,\nPO-6: The Engineer and The World, PO-7: Ethics, PO-8: Individual and Collaborative Team\nWork, PO-9: Communication, PO-10: Project Management and Finance, PO-11: Life Long\nLearning)\n\nInference:\n\n- Date: Staff-in-charge\n\nDepa =a —_\nepartment of E&C Engg. 30 SIT, Tumakuru - 572 103\n\nPO-3: Design/Development of"
+  },
+  {
+    "chunk_id": 36,
+    "page": 33,
+    "text": "i\ni)\ni!\ni:\n5}\n¥\n1\n4\n{\n\n{\n\nMIECLOL Anatoy Rleetranle Clreatta Loh\n\nems omens\n\nCireult Diagram:\n\nDesign:\nSpecifications: UTP = 6V, LTP = -2V\n\nrae Oe Ta\nR, +R,\n\nVR Vay Ro\n\nLTP w=2 ee HOt 2\n\nRi+R, Ry +R,\n\nVR,\n\n(1)~(2) => UTP-LTP = 82242\n\n+R,\nVR\n(1)+(2)=> UTP + LTP = 4 <2!\ni+R,\nLet Vsat = 12 V & R; = 10KQ\n(3) => R, = 20KN\n\n(4) =>¥, =3V\n\nSirvilarly design for (UTP, LTP) = (4, -4), (8, 2), (2. -4), (-2, -4).\n\nREE cin er\n\n-(1)\n\n(2)\n\n~-(3)\n\nSIT, Tumakury - £721"
+  },
+  {
+    "chunk_id": 37,
+    "page": 34,
+    "text": "Analog Electronic Ci\nS3ECLOI Analog Elec! ronic Circuits Lab UI Semester\n\nExperiment No. 8 Date:\n\nSchmitt Trigger\nAim: To Design & Test Schmitt Trigger circuit for the given specifications.\nApparatus required:\nSL Apparatus / fl\nNo. Components Mange Piss\n[_ 1. [Analog discoverykit [>= |\nIC pA 741\n\nResistors\n\nProcedure:\n\nConnections are made as shown in the circuit diagram.\nA sinusoidal input whose amplitude is greater than the magnitude of the UTP & LTP is\n\napplied and square wave output is observed.\n\n3. UTP & LTP values are noted.\n\nTo obtain transfer characteristics, input is applied to channel-1 and output to channel-2.\n\nUTP & LTP are measured on the transfer characteristics also and thus verified."
+  },
+  {
+    "chunk_id": 38,
+    "page": 35,
+    "text": "SIECLOI Analog Electronic Circuits Lab\n\nY Se,\ney\nWaveforms:\nVi\n| UEP Paysseu\\etess eco a\nt\nTP tee ae eee ate age\n| Vo\n| +Vsat\n\n| -Vsat"
+  },
+  {
+    "chunk_id": 39,
+    "page": 36,
+    "text": "s3ECLOI Analog Electronic Circuits Lab\n1H Semmster\n\nSl | UTP U\n\nTP LT\nPractical cave\nCeer ree\n\nLTP\n\nPractleal\n\nResults:\n\nCO - PO Mapping\n\n—\nArticulation\n\nco Statement\n\n[| Use modern tool to design and test the\n| co2 | working principle of analog electronic\n\ncircuits\nssessment (To be assessed by student after the\nUse modern tool to design and test the |\nco2 | working principle of analog electronic\ncircuits i: a\n\nAttainment levels: 1- Slight (Low), 2-Moderate (Medium), 3-Substantial (High)\n\ncompletion of ex\n\nSelf A:\n\n——\n\n(PO-1; Engineering Knowledge, PO-2: Problem analysis, PO-3: Design/Development of\ntions, PO-4: Conduct Investigations of Complex Problems, PO-5: Engineering Tool Usage,\n7: Ethics, PO-8: Individual and Collaborative Team\n\nent and Finance, PO-11; Life Long\n\nSoll\nPO-6: The Engineer and Ti the World, PO-\n\nWork, PO-9: Communication, PO-10: Project Managem\n\nLearning)\n]\n\nInference:\n\nDate: Staff-in-charge\n_\nskuru— 572 103"
+  },
+  {
+    "chunk_id": 40,
+    "page": 37,
+    "text": "SIECLOL Anatog Electronic Circults Lab\n\nCieeult Diagram: |\nVee at 5V,\noO\n\n01\n\nGround\n\nDesign:\n\nfF =1KHz, D=50% (Symmetrical Square wave)\nTon = 0.693 RC and Top = 0.693 RaC\nGiven D=50% and f=1KHz\n\nBL ef\n\neres eT\n\n= 1ms\n\nSince, Duty cycle, D = row =05\n' Ton = Tore = 0.5ms\nLet C=0.4pF\nThen, Toy = 0.693 R,C\nO.Sms = 0.693 x R, x 0.1uF\nRy =72KQ\nSimilarly Rp =72KQ\n\nSitnilarly design the circuit for following specifications\n1,\n\n>\n\n2. f =1 KHz and Duty cycle\n\nf =1KHz and Duty cycle = 79 %\n\n= 30%"
+  },
+  {
+    "chunk_id": 41,
+    "page": 38,
+    "text": "[\n\n|\n\ns3eCL0! Analog Klyctronig Clrouits Lab\n\npxporiment No, 9\n\nI Semester\n\nDate:\n\nASTABLE Multivibrator\n\nAint:\nApparatus required:\n\nTo Design & Test Astable multivibrator using 555 timer.\n\n[ 1. __| Analog discovery kit\nIC 555 Timer\n\n| 4. _| Resistors and Capacitors\n\nprocedure:\n\nRange\n\nAs per design\n\n| cach\n\n4. Check the components/Equipment for their good working condition.\n\nConnections are made as shown in the circuit diagram.\n\n2\n3, Observe the output waveforms, measure Ton & Tom and calculate the frequency.\n4\n\nObserve the waveforms at different points as shown in figure.\n\n\\. = ike OC = Tlo-fe\nRP { O< = Ten\n= Tr\n\nA ets, 8 TT\n\nSMS\n\n‘on = OAs\nAin Ton pate\n\nTeg = Ims~ 9 Ams = 0.3m¢\n\nVou 7 O-GASRAC\n\noat 0.643 Rax 0.1 mg 3\n\nRn = 10..0\\K A,\n| hae\n) Os = volt _ 0-993 Rgxowsee>\nRg = 43k\nae\n\nOo: se Vo 4h Uc = Forfs\n>\n\nims = 0-34 Toe\n\nyas Sims,\n\nS en7 O Geary Rac\n“\n\nka =\n\nD) Gas,\nRg = \\o-\\ Ne\n— TT\n\nSIT, Tumakuru ~ 572 103\n36\n\n> Department of E&C Engg."
+  },
+  {
+    "chunk_id": 42,
+    "page": 39,
+    "text": "S3IECLOI Analog Electronic Ciresits Lab\n\nWaveforms:\n\nDt-r0°/,\nYNeu (6883\n4 Nu? a ead\nTon > 0S Tew\nTope = 0238 3m\n\nF214\nPe 1943H>\n\nTher d\n\nDe 36+/,\nWe >i E8eav\nYee > 3, gNbV\nTow = 0-343.\n\ntyp Peso\nTo le 214\n\nPedie ts eo\n\nLy 4\n37"
+  },
+  {
+    "chunk_id": 43,
+    "page": 40,
+    "text": "__—_\n\nEC Lol Aoalog Electronic Circuits Lab\n\nOs\nos\n¥ os\n\nArticulation\n\nILE Sowmesis¥\n\nResults:\n\nPractical\n\nTheoretical\n\nUse modern tool to design and test the\nworking principle of analog electronic | 2\n\ncircuits\n\nSelf Assessment (To be assessed by student after the\n\nUse modern tool to design and test the\nco2 working principle of analog electronic\n\ncircuits\n\nAttainment levels: 1- Slight (Low), 2-Moderate (Medium), 3-Substantial (High)\n\nPO-2: Problem analysis, PO-3: Design/Development of\n\nSolutions, PO-4: Conduct Investigations of Complex Problems, PO-5: Engineering Tool Usage.\n0-6: The Engineer and The World, PO-7. Ethics, PO-8: Individual and Collaborative Team\nss PO-9; Communication, PO-10: Project Management and Finance, PO-11: Life Long\n\nLearning)\n\n(PO-1: Engineering Knowledge,\n\nInference:\n\nDate: Staff-in-charge\n\n38 SIT, Tumakuru — 572 103\n\nJepartment of E&C Engg."
+  },
+  {
+    "chunk_id": 44,
+    "page": 41,
+    "text": "]\n\nWa\nSIECLOT Analog Electronic Cirewits Lab\n\nSECUM Ames eek SE\n\nMonostable Multivibrator:\n\n_\n\nf\nVec=t 5V\n\nDesign:\n\nGiven, Pulse width, PW = Ims\n\nPulse width, PW=1.1RC,  .. Ims= LIRC\n\nLet C = 0.1 uf\n\ni xa\n= = 91 KO\n11 X 0.1 x 1076\n\nWaveforms:\n\nTrigger Input\n\n+5V\n\nPulse Width\n+++}\n\nVe\n\n2/3Vce\n\nDepartment of F&C Engs."
+  },
+  {
+    "chunk_id": 45,
+    "page": 42,
+    "text": "SL =. eee\n\nAnalog Electronic Circuis L\necLot xd HL haere ober\n\n$3\n\nio. 1\nExperiment No- Date:\n\nMONOSTABLE Multivibrator\nim: TO Design & Test Monostable using 555 timer.\n\nparatus required:\n\nAP\nSI. |\nApparatus / Components Range Nos |\nAnalog discovery kit ee\nIC 555 Timer { i\nResistors and Capacitors As per design Teach !\nprocedure:\n\n1. Check the components/Equipment for their good working condition.\n2, Connections are made as shown in the circuit diagram.\n3. Set suitable frequency (Say 10 KHz) and amplitude (10V peak to peak), DC offset\n\nand duty cycle 90%.\n4, Observe the output waveform, measure PW and verify with the designed value.\n5, Observe the waveforms at different points as shown in figure.\n\nResults:\nPulse width (Theoretical) = 4 ws! A\nPulse width (Practical) =__©- 50h ie\n\nco-PO Mapping\n\n5v\n\nArticulation\n\n° |\n\n|\n\ni\n\ni FE\nco | Statement S |\n|\n\ni\n\nUse modern tool to design and test the\nC02 | working principle of analog electronic | 2 2 2\n\ncircuits\nSelf Assessment (To be assessed by student after\n| Use modern tool to design and test m\n\nthe completion of experiment)\n\nTULL\n\nAttainment levels: 1- Slight (Low), 2-Moderate (Medium), 3-Substantial (High)\n_ (PO-1; Engineering Knowledge"
+  },
+  {
+    "chunk_id": 46,
+    "page": 42,
+    "text": "student after\n| Use modern tool to design and test m\n\nthe completion of experiment)\n\nTULL\n\nAttainment levels: 1- Slight (Low), 2-Moderate (Medium), 3-Substantial (High)\n_ (PO-1; Engineering Knowledge, PO-2: Problem analysis, PO-3: Design/Development of\n- Solutions, PO-4: Conduct Investigations of Complex Problems, PO-5: Engineering Tool Usage.\nq PO-6: The Engineer and The World, PO-7: Ethics, PO-8: Individual and Collaborative Team\n- Work, PO-9: Communication, PO-10: Project Management and Finance, PO-11: Life Long\n\nLearning)\n\nC02 | working principle of analog electronic\ncircuits\n\n,\na\n_ Inference:\n\nDate: Staff-in-charge\n\nDepartment of E&C Engg. 40 SIT, Tumakure — 572 103"
+  },
+  {
+    "chunk_id": 47,
+    "page": 43,
+    "text": "|\n\ni\na\neh\ni\n\nnT] Seme,\nSOUCIAL Amming Beatie NE geet\n\\ sec\nCircuit Diagram: RE D pxperim\nCee\n. 470 Cael\nri Sama RO “Ce, IRF63) Alea\n| red cand find figu\ni O.tut\nfoes) { je ; Apparat\n| {7} IRF630* :\ntut a\nib Ot \\ Ss ad Vo Gos ;\nrece l & Slazur\nR2 2 33MQ_° RS ee\n| a\nDesign: proced\n; 2 2 ;\nGiven, Vpp = 5V and Ip =5 mA, Assume, K’ (W/L) = 0.31A/V\" and Vt = 3V :\nIp = 0.5 K’ (W/L) (Vos - VO? e\nVos = 3.18V i:\nAssume Ven = 2.5V, Vos = 2V (Vps > Vas Vi) and Vrs = 0.5V pone\nSince Ip=5mA, Rp = Vap/ Ip = 5002 and Rs = Vrs / Ip = 1002 i\nSince Vs = 0.5 V, Vg = 3.68V\nVo = Vo R2/ (RI + R2), Assume RI = 1.2 MQ, then R2 = 3.3 MQ\nah\nChoose Cp = 47 pF, Coy = Ce = 0.1 WF 5\nIdeal Graph: Ms Resul\nGain dB j\n3dB 7\n3.\n4\n> im. Band width\nfin Hz\nfy fy,\n\nf. = Lower cutoff frequency f , = Higher cutoff frequency\n\nDep"
+  },
+  {
+    "chunk_id": 48,
+    "page": 44,
+    "text": "_—\n\ngcc Aoulog Electronic Circuits Lab\na '\npxperimen! No. 11 a\n\n11h Nw rtrestee\n\nDate:\n\nSincle S\ningle Stage MOSFET Amplifier\n\nnalog discovery kit\n\nprocedure:\nifs Components / Equipment are tested for their good working condition\n2s Connections are made as shown in the circuit diagram\n\n/ Ro) ‘\n\n3, By disconnecting the AC input measure the quiescent point (Vos and Ip = Vao\n\nTo find frequency response:\n|, Connect the AC source.\n\nKeeping the frequency of the AC source in mid band region (say\nn the amplitude\n\n10 kHz) adjust the amplitude to get the distortion less output. Note dow\n\nof the input signal.\n\nBy using network analyze\nd bandwidth from the graph.\n\n+ obtain the frequency response curve.\n\n3. Calculate gain (Av) an\n\nResult: OSA\n|, Quiescent point : Vos = v, bata mA, Vos = 3.34 Vv\n(in mid band region )\n\nVoltage Gain ( Av) = 4.52. ab\n\nBandwidth (BW) = 18. $i _Hz\nM= Avy*BW)= 1. 49 99M Hz\n\neF ww\n\nFigure of merit ( F\n\nSIT, Tumakure 572 103\n\n42"
+  },
+  {
+    "chunk_id": 49,
+    "page": 45,
+    "text": "EE\n\ni lbs abi eta aa: cena IE RTE\n\nANCE Nema Bbratade Rea\n\nOO PO Mapping\n\n— Attenlation\n\nik yoo senor: enh GORE ORME AINE SLT MSMR\n\nion! Statement\n| Use modern tool (0 design and test the\n\n+ OO J working principle of analog electronie\n\ni ehwults_\n\n| Nett Asseuaent (Vo be assessed by student after the completion of experiment)\n\nUse modern tool to design and test the\nOO2 | working principle of analog electronic\nee\n\nreper\n\nAttainment levels: 1 Slight (Low), 2sModerate (Medium), 3-Substantial (High)\n\n(POE: Engineering Knowledge, PO2: Problem analvsix, PO-3) Design/Developmen y\nSovetioany, POs) Conduct Investigations af Complex Problems, PO-5; Engineering Tool Usage\nPOO: Dhe Engineer and The World POT: Ethics, POS: Individual and Collaborative Tean\nWork PO: Communication, PO-10: Project Management and Finance, PO-11s Life Long\n\nLeong)\n\nInference: —_"
+  }
+]
