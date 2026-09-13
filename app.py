@@ -13,25 +13,29 @@ from dotenv import load_dotenv
 from google import genai
 from google.genai import types
 from auth import register_user, login_user
-from database import chat_history_collection, technician_records_collection
+from database import (
+    chat_history_collection,
+    experiment_submissions_collection,
+    technician_records_collection
+)
 
 
 # ============================================================
-# LOAD ENVIRONMENT / GEMINI
+# LOAD ENVIRONMENT / AI SERVICE
 # ============================================================
 
 load_dotenv()
 api_key = os.getenv("GEMINI_API_KEY")
 
 if not api_key:
-    st.error("Gemini API key not found. Please check your .env file.")
+    st.error("AI service key not found. Please check your .env file.")
     st.stop()
 
 client = genai.Client(api_key=api_key)
 
 
 # ============================================================
-# GEMINI MODELS
+# AI RESPONSE MODELS
 # ============================================================
 
 models_to_try = [
@@ -68,10 +72,11 @@ html, body, [class*="css"], .stApp {
     min-height: 100vh;
 }
 
-/* Hide standard Streamlit header & decoration */
+/* Keep the Streamlit header available so the sidebar toggle remains usable. */
 header[data-testid="stHeader"] {
-    visibility: hidden !important;
-    display: none !important;
+    visibility: visible !important;
+    display: block !important;
+    background: transparent !important;
 }
 
 [data-testid="stToolbar"] {
@@ -670,7 +675,7 @@ def legacy_show_landing_page():
         st.markdown("""
         <div class="brand-title">
             <span>🔬 LabAI</span>
-            <span class="status-pill"><span class="pulse-dot"></span> GEMINI 3 & FAISS ONLINE</span>
+            <span class="status-pill"><span class="pulse-dot"></span> AI ENGINE & FAISS ONLINE</span>
         </div>
         """, unsafe_allow_html=True)
 
@@ -731,7 +736,7 @@ def legacy_show_landing_page():
         </h1>
         <p class="hero-subtitle">
             Master hands-on experiments, troubleshoot breadboards in real time via computer vision,
-            query institutional laboratory manuals with FAISS-grounded RAG, and practice oral vivas with Gemini 3 Flash.
+            query institutional laboratory manuals with FAISS-grounded RAG, and practice oral vivas with the LabAI knowledge engine.
         </p>
     </div>
     """, unsafe_allow_html=True)
@@ -820,7 +825,7 @@ def legacy_show_landing_page():
         <div class="metric-card">
             <div class="metric-val" style="color: #34D399;">&lt; 800ms</div>
             <div class="metric-lbl">Diagnostic Latency</div>
-            <div style="font-size: 0.78rem; color: #64748B; margin-top: 4px;">Gemini 3 Flash Inference</div>
+            <div style="font-size: 0.78rem; color: #64748B; margin-top: 4px;">AI Engine Inference</div>
         </div>
         """, unsafe_allow_html=True)
 
@@ -858,9 +863,9 @@ def legacy_show_landing_page():
             <div class="feature-icon-wrapper">👁️</div>
             <div class="feature-title">Multimodal Circuit Vision</div>
             <div class="feature-desc">
-                Upload photos of physical breadboards or schematics. Gemini 3 Flash detects inverted diodes, loose jumper rails, open ground lines, and wrong resistor color codes.
+                Upload photos of physical breadboards or schematics. The AI engine detects inverted diodes, loose jumper rails, open ground lines, and wrong resistor color codes.
             </div>
-            <span class="feature-tag">Computer Vision + Gemini</span>
+            <span class="feature-tag">Computer Vision + AI</span>
         </div>
         """, unsafe_allow_html=True)
 
@@ -961,7 +966,7 @@ def legacy_show_landing_page():
             <div class="step-num">02</div>
             <div style="font-weight: 700; font-size: 1.15rem; color: #FFFFFF; margin-bottom: 8px;">Multimodal Reasoning & RAG</div>
             <div style="color: #94A3B8; font-size: 0.92rem; line-height: 1.6;">
-                FAISS vector retriever searches the official lab manual while Gemini 3 Flash performs cross-modal computer vision inspection.
+                FAISS vector retriever searches the official lab manual while the AI engine performs cross-modal computer vision inspection.
             </div>
         </div>
         """, unsafe_allow_html=True)
@@ -1124,7 +1129,7 @@ def legacy_show_landing_page():
     st.markdown("""
     <div class="footer-wrap">
         <div class="footer-badges">
-            <span class="tech-badge">⚡ Google Gemini 3 Flash</span>
+            <span class="tech-badge">⚡ LabAI Knowledge Engine</span>
             <span class="tech-badge">🔍 FAISS Vector Database</span>
             <span class="tech-badge">🧠 SentenceTransformers</span>
             <span class="tech-badge">🍃 MongoDB Atlas</span>
@@ -1167,6 +1172,29 @@ st.markdown("""
 [data-testid="stExpander"] { border-color:rgba(148,163,184,.25) !important; }
 [data-testid="stSidebar"], [data-testid="stSidebar"] [data-testid="stMarkdownContainer"], [data-testid="stSidebar"] [data-testid="stMarkdownContainer"] p, [data-testid="stSidebar"] label, [data-testid="stSidebar"] label p, [data-testid="stSidebar"] [data-testid="stCaptionContainer"], [data-testid="stSidebar"] [data-testid="stCaptionContainer"] p, [data-testid="stSidebar"] .stButton > button { color:#000000 !important; }
 [data-testid="stSidebar"] .role-badge { color:#000000 !important; }
+[data-testid="stSidebar"][aria-expanded="false"] {
+    display: block !important;
+    visibility: visible !important;
+    min-width: 18rem !important;
+    width: 18rem !important;
+    transform: none !important;
+}
+[data-testid="stSidebar"][aria-expanded="false"] > div:first-child {
+    width: 18rem !important;
+}
+[data-testid="stForm"]:has(input[aria-label="Experiment title"]) input,
+[data-testid="stForm"]:has(input[aria-label="Experiment title"]) textarea,
+[data-testid="stForm"]:has(input[aria-label="Experiment title"]) [data-baseweb="select"],
+[data-testid="stForm"]:has(input[aria-label="Experiment title"]) label,
+[data-testid="stForm"]:has(input[aria-label="Experiment title"]) label p,
+[data-testid="stForm"]:has(input[aria-label="Experiment title"]) [data-testid="stFileUploaderDropzone"] {
+    color: #000000 !important;
+}
+[data-testid="stForm"]:has(input[aria-label="Experiment title"]) input,
+[data-testid="stForm"]:has(input[aria-label="Experiment title"]) textarea,
+[data-testid="stForm"]:has(input[aria-label="Experiment title"]) [data-baseweb="select"] {
+    background-color: #FFFFFF !important;
+}
 [data-testid="stSidebar"] [role="radiogroup"] { gap: .35rem !important; }
 [data-testid="stSidebar"] [role="radiogroup"] label { display:flex !important; align-items:center !important; width:100% !important; padding:.65rem .8rem !important; border-radius:10px !important; cursor:pointer !important; transition:background .2s ease, color .2s ease !important; }
 [data-testid="stSidebar"] [role="radiogroup"] label:hover { background:rgba(99,102,241,.12) !important; }
@@ -1240,7 +1268,7 @@ def render_features():
 
 def render_how_it_works():
     st.markdown('<div class="section-heading"><span>HOW IT WORKS</span><h2>Grounded answers, not guesses</h2></div>', unsafe_allow_html=True)
-    steps = [("01", "Knowledge Sources", "Your laboratory manual and curated experiment data."), ("02", "FAISS Retrieval", "Relevant context is located before an answer is generated."), ("03", "Gemini Grounded Response", "A clear response is composed from the retrieved evidence.")]
+    steps = [("01", "Knowledge Sources", "Your laboratory manual and curated experiment data."), ("02", "FAISS Retrieval", "Relevant context is located before an answer is generated."), ("03", "Grounded AI Response", "A clear response is composed from the retrieved evidence.")]
     cols = st.columns(3)
     for col, (number, title, text) in zip(cols, steps):
         with col:
@@ -1446,6 +1474,21 @@ except Exception as e:
 
 
 AEC_PDF_PATH = os.path.join("aec", "AEC.pdf")
+RESEARCH_PATH = "research"
+research_index = None
+research_chunks = []
+research_load_error = None
+
+try:
+    research_index = faiss.read_index(os.path.join(RESEARCH_PATH, "research_faiss.index"))
+    with open(
+        os.path.join(RESEARCH_PATH, "research_chunks.json"),
+        "r",
+        encoding="utf-8"
+    ) as file:
+        research_chunks = json.load(file)
+except Exception as error:
+    research_load_error = str(error)
 
 
 # ============================================================
@@ -1552,6 +1595,10 @@ def search_faiss(query, faiss_index, rag_chunks, k=5):
 
             "score": float(score),
 
+            "chunk_id": chunk.get("chunk_id", int(index)),
+
+            "paper_title": chunk.get("paper_title", "Unknown paper"),
+
             "experiment_number": chunk.get("experiment_number"),
 
             "experiment": chunk.get(
@@ -1577,6 +1624,27 @@ def retrieve_chunks(query, lab_name="Communication Systems", k=5):
 def search_lab_manual(query, k=5):
     """Backward-compatible Communication Systems retrieval wrapper."""
     return retrieve_chunks(query, "Communication Systems", k=k)
+
+
+def search_research(query, k=10):
+    """Retrieve normalized research-paper chunks for a user question."""
+    if research_index is None or not research_chunks:
+        return []
+
+    query_results = search_faiss(
+        query,
+        research_index,
+        research_chunks,
+        k=min(k, research_index.ntotal)
+    )
+    return [
+        {
+            "paper_title": result["paper_title"],
+            "page": result["page"],
+            "text": result["text"]
+        }
+        for result in query_results
+    ]
 
 
 # ============================================================
@@ -1713,7 +1781,7 @@ def render_manual_content(content):
 
 
 def generate_learning_guide(experiment_name, manual_text, known_information=""):
-    """Complete missing study sections with Gemini while preserving manual facts."""
+    """Complete missing study sections with the AI assistant while preserving manual facts."""
     prompt = f"""
 You are an expert engineering laboratory educator creating a public learning guide.
 
@@ -1753,6 +1821,150 @@ Return only the study guide in Markdown.
         except Exception:
             continue
     return None
+
+
+def save_experiment_submission(title, lab_name, summary, manual_text, uploaded_file):
+    """Store a student experiment as pending until a technician reviews it."""
+    if st.session_state.user_role != "student":
+        return False, "Only students can submit new experiments."
+
+    file_bytes = uploaded_file.getvalue()
+    if len(file_bytes) > 10 * 1024 * 1024:
+        return False, "Please upload a file smaller than 10 MB."
+
+    try:
+        experiment_submissions_collection.insert_one({
+            "title": title.strip(),
+            "lab_name": lab_name,
+            "summary": summary.strip(),
+            "manual_text": manual_text.strip(),
+            "file_name": uploaded_file.name,
+            "file_type": uploaded_file.type or "application/octet-stream",
+            "file_data": file_bytes,
+            "status": "pending",
+            "submitted_by": st.session_state.user_id,
+            "submitted_by_name": st.session_state.user_name,
+            "created_at": datetime.now(timezone.utc),
+            "reviewer_notes": ""
+        })
+        return True, "Experiment submitted for technician review."
+    except Exception as error:
+        return False, f"Could not submit experiment: {error}"
+
+
+def render_experiment_submission():
+    """Allow students to submit experiment material for technician approval."""
+    st.markdown("## Submit a New Experiment")
+    st.caption("Your experiment will remain private until a lab technician reviews and publishes it.")
+    with st.form("experiment_submission_form"):
+        title = st.text_input("Experiment title", key="submission_title")
+        lab_name = st.selectbox(
+            "Laboratory",
+            ["Communication Systems", "Analog Electronics Circuits"],
+            key="submission_lab"
+        )
+        summary = st.text_area(
+            "Short summary",
+            placeholder="What does this experiment teach or demonstrate?",
+            key="submission_summary"
+        )
+        manual_text = st.text_area(
+            "Experiment guide or notes",
+            placeholder="Add the aim, apparatus, theory, procedure, observations, and precautions.",
+            height=220,
+            key="submission_manual_text"
+        )
+        uploaded_file = st.file_uploader(
+            "Upload experiment file",
+            type=["pdf", "txt", "md"],
+            key="submission_file"
+        )
+        submitted = st.form_submit_button("Send to Lab Technician")
+
+    if submitted:
+        if not title.strip() or not summary.strip() or not uploaded_file:
+            st.warning("Enter a title and summary, then upload the experiment file.")
+        else:
+            with st.spinner("Sending experiment for review..."):
+                success, message = save_experiment_submission(
+                    title,
+                    lab_name,
+                    summary,
+                    manual_text,
+                    uploaded_file
+                )
+            st.success(message) if success else st.error(message)
+
+    st.markdown("### My submissions")
+    submissions = list(
+        experiment_submissions_collection.find(
+            {"submitted_by": st.session_state.user_id},
+            {"title": 1, "lab_name": 1, "status": 1, "reviewer_notes": 1, "created_at": 1}
+        ).sort("created_at", -1)
+    )
+    if not submissions:
+        st.info("You have not submitted an experiment yet.")
+    for submission in submissions:
+        status = submission.get("status", "pending").title()
+        with st.expander(f"{submission.get('title', 'Untitled')} · {status}"):
+            st.write(f"Laboratory: {submission.get('lab_name', 'Not specified')}")
+            if submission.get("reviewer_notes"):
+                st.write(f"Technician notes: {submission['reviewer_notes']}")
+
+
+def get_published_submissions():
+    """Return technician-approved experiments for the public repository."""
+    return list(
+        experiment_submissions_collection.find(
+            {"status": "published"}
+        ).sort("published_at", -1)
+    )
+
+
+def render_published_submissions(search_term):
+    """Render approved student experiments as repository cards."""
+    submissions = []
+    for submission in get_published_submissions():
+        searchable_text = " ".join([
+            submission.get("title", ""),
+            submission.get("summary", ""),
+            submission.get("lab_name", ""),
+            submission.get("manual_text", "")
+        ]).lower()
+        if not search_term or search_term in searchable_text:
+            submissions.append(submission)
+
+    if not submissions:
+        return 0
+
+    st.markdown("### Student-Published Experiments")
+    for row_start in range(0, len(submissions), 3):
+        columns = st.columns(3)
+        for column, submission in zip(columns, submissions[row_start:row_start + 3]):
+            with column:
+                st.markdown(
+                    f'<article class="feature-card clean dashboard-card">'
+                    f'<i>📘</i><h3>{submission.get("title", "Untitled")}</h3>'
+                    f'<p>{submission.get("summary", "")}</p>'
+                    f'<small>{submission.get("lab_name", "Laboratory")}</small>'
+                    f'</article>',
+                    unsafe_allow_html=True
+                )
+                with st.expander("Open detailed guide"):
+                    manual_text = submission.get("manual_text", "")
+                    if manual_text:
+                        st.markdown(manual_text)
+                    else:
+                        st.info("The submitted file has no text preview. Download it to view the full guide.")
+                    if submission.get("file_data"):
+                        st.download_button(
+                            "Download experiment file",
+                            data=submission["file_data"],
+                            file_name=submission.get("file_name", "experiment"),
+                            mime=submission.get("file_type", "application/octet-stream"),
+                            key=f"download_submission_{submission['_id']}"
+                        )
+    return len(submissions)
 
 
 def get_aec_experiment_chunks(experiment):
@@ -1803,8 +2015,8 @@ def render_aec_repository(search_term):
 
             guide_key = f"aec_repository_guide_{experiment['number']}"
             if guide_key not in st.session_state:
-                if st.button("Generate detailed guide with Gemini", key=f"generate_{guide_key}"):
-                    with st.spinner("Gemini is preparing the detailed AEC guide..."):
+                if st.button("Explore More", key=f"generate_{guide_key}"):
+                    with st.spinner("Preparing the detailed AEC guide..."):
                         st.session_state[guide_key] = generate_learning_guide(
                             experiment["name"],
                             manual_text
@@ -1883,13 +2095,27 @@ def render_learning_repository():
         experiment for experiment in AEC_REPOSITORY_EXPERIMENTS
         if not search_term or search_term in experiment["name"].lower() or search_term in experiment["summary"].lower()
     ]
-    total_experiments = len(communication_experiments) + len(knowledge_base) + len(AEC_REPOSITORY_EXPERIMENTS)
+    published_submissions = get_published_submissions()
+    total_experiments = (
+        len(communication_experiments)
+        + len(knowledge_base)
+        + len(AEC_REPOSITORY_EXPERIMENTS)
+        + len(published_submissions)
+    )
+    published_matches = [
+        submission for submission in published_submissions
+        if not search_term or search_term in " ".join([
+            submission.get("title", ""),
+            submission.get("summary", ""),
+            submission.get("lab_name", "")
+        ]).lower()
+    ]
     st.markdown(
-        f"**{len(matching_experiments) + len(electronics_experiments) + len(aec_matches)} of "
+        f"**{len(matching_experiments) + len(electronics_experiments) + len(aec_matches) + len(published_matches)} of "
         f"{total_experiments} experiments** available"
     )
 
-    if not matching_experiments and not electronics_experiments and not aec_matches:
+    if not matching_experiments and not electronics_experiments and not aec_matches and not published_matches:
         st.info("No experiments match your search.")
         return
 
@@ -1906,10 +2132,10 @@ def render_learning_repository():
             st.markdown(f"**Source:** {source}  \n**Manual page:** {page}")
             if guide_key not in st.session_state:
                 if st.button(
-                    "Complete this guide with Gemini",
+                    "Explore More",
                     key=f"generate_{guide_key}"
                 ):
-                    with st.spinner("Gemini is completing the learning guide..."):
+                    with st.spinner("Preparing the learning guide..."):
                         st.session_state[guide_key] = generate_learning_guide(
                             experiment["name"],
                             cleaned_text
@@ -1919,7 +2145,7 @@ def render_learning_repository():
                 if st.session_state[guide_key]:
                     st.markdown(st.session_state[guide_key])
                 else:
-                    st.error("Gemini could not complete this guide. Try again later.")
+                    st.error("The AI assistant could not complete this guide. Try again later.")
             display_sections = [
                 ("Aim / Objective", ("aim", "objective")),
                 ("Apparatus Required", ("apparatus",)),
@@ -1953,10 +2179,10 @@ def render_learning_repository():
                 known_information = json.dumps(experiment, indent=2)
                 if guide_key not in st.session_state:
                     if st.button(
-                        "Complete this guide with Gemini",
+                        "Explore More",
                         key=f"generate_{guide_key}"
                     ):
-                        with st.spinner("Gemini is completing the learning guide..."):
+                        with st.spinner("Preparing the learning guide..."):
                             st.session_state[guide_key] = generate_learning_guide(
                                 experiment.get("name", experiment_key),
                                 "",
@@ -1973,6 +2199,7 @@ def render_learning_repository():
                     st.markdown(f"- {fault}")
 
     render_aec_repository(search_term)
+    render_published_submissions(search_term)
 
 
 REFERENCE_CIRCUIT_DIR = "reference_circuits"
@@ -2033,7 +2260,7 @@ def render_diagnostic_inputs(experiment_key):
 
 
 # ============================================================
-# GEMINI RAG ANSWER
+# GROUNDED AI ANSWER
 # ============================================================
 
 def generate_grounded_answer(question, retrieved_chunks, lab_name, sections=None):
@@ -2157,7 +2384,7 @@ Manual Page: {result['page']}
 
     # Procedure answers retain the existing structured procedure lookup.
     # --------------------------------------------------------
-    # GEMINI PROMPT
+    # GROUNDED AI PROMPT
     # --------------------------------------------------------
 
     prompt = f"""
@@ -2255,8 +2482,8 @@ def save_technician_record(record_type, payload):
 def render_technician_console():
     st.markdown("## Technician Console")
     st.caption("Verify circuits, maintain experiment references, and capture viva notes without exposing student identities.")
-    verify_tab, maintenance_tab, viva_tab, references_tab = st.tabs([
-        "Circuit verification", "Maintenance log", "Viva notes", "Reference circuits"
+    verify_tab, maintenance_tab, viva_tab, references_tab, review_tab = st.tabs([
+        "Circuit verification", "Maintenance log", "Viva notes", "Reference circuits", "Experiment review"
     ])
 
     with verify_tab:
@@ -2365,6 +2592,80 @@ def render_technician_console():
                 })
                 st.success("Reference image saved for this experiment.")
 
+    with review_tab:
+        render_experiment_review()
+
+
+def render_experiment_review():
+    """Let technicians approve, reject, and publish student submissions."""
+    if st.session_state.user_role != "technician":
+        st.error("Only lab technicians can review experiment submissions.")
+        return
+
+    pending_submissions = list(
+        experiment_submissions_collection.find(
+            {"status": "pending"}
+        ).sort("created_at", 1)
+    )
+    st.markdown("### Pending experiment submissions")
+    if not pending_submissions:
+        st.info("There are no experiments waiting for review.")
+        return
+
+    for submission in pending_submissions:
+        submission_id = str(submission["_id"])
+        with st.expander(
+            f"{submission.get('title', 'Untitled')} · {submission.get('lab_name', 'Laboratory')}"
+        ):
+            st.write(f"Submitted by: {submission.get('submitted_by_name', 'Student')}")
+            st.write(submission.get("summary", ""))
+            if submission.get("manual_text"):
+                st.markdown(submission["manual_text"])
+            st.caption(f"Attached file: {submission.get('file_name', 'Not available')}")
+            if submission.get("file_data"):
+                st.download_button(
+                    "Download attachment for review",
+                    data=submission["file_data"],
+                    file_name=submission.get("file_name", "experiment"),
+                    mime=submission.get("file_type", "application/octet-stream"),
+                    key=f"review_download_{submission_id}"
+                )
+            reviewer_notes = st.text_area(
+                "Review notes",
+                key=f"review_notes_{submission_id}"
+            )
+            approve_col, reject_col = st.columns(2)
+            with approve_col:
+                if st.button("Approve and publish", key=f"approve_submission_{submission_id}", use_container_width=True):
+                    experiment_submissions_collection.update_one(
+                        {"_id": submission["_id"], "status": "pending"},
+                        {"$set": {
+                            "status": "published",
+                            "reviewer_notes": reviewer_notes.strip(),
+                            "reviewed_by": st.session_state.user_id,
+                            "reviewed_at": datetime.now(timezone.utc),
+                            "published_at": datetime.now(timezone.utc)
+                        }}
+                    )
+                    st.success("Experiment approved and published to the Learning Repository.")
+                    st.rerun()
+            with reject_col:
+                if st.button("Reject submission", key=f"reject_submission_{submission_id}", use_container_width=True):
+                    if not reviewer_notes.strip():
+                        st.warning("Add review notes explaining why the submission needs changes.")
+                    else:
+                        experiment_submissions_collection.update_one(
+                            {"_id": submission["_id"], "status": "pending"},
+                            {"$set": {
+                                "status": "rejected",
+                                "reviewer_notes": reviewer_notes.strip(),
+                                "reviewed_by": st.session_state.user_id,
+                                "reviewed_at": datetime.now(timezone.utc)
+                            }}
+                        )
+                        st.success("Submission rejected with feedback for the student.")
+                        st.rerun()
+
 
 def render_general_ask_ai():
     st.markdown("## Ask LabAI")
@@ -2382,7 +2683,123 @@ def render_general_ask_ai():
             with st.chat_message("assistant"):
                 render_chat_response(answer, sources)
         else:
-            st.error("Gemini is currently unavailable. Please try again later.")
+            st.error("The AI assistant is currently unavailable. Please try again later.")
+
+
+def set_research_query(query):
+    st.session_state.research_query = query
+
+
+def generate_research_answer(query, results):
+    """Generate a research answer strictly grounded in retrieved paper chunks."""
+    context = "\n\n".join(
+        f"Paper: {result['paper_title']}\n"
+        f"Page: {result['page']}\n"
+        f"{result['text']}"
+        for result in results
+    )
+    prompt = f"""
+You are a communication systems research assistant.
+
+Answer ONLY using the retrieved research paper context below.
+
+Question:
+{query}
+
+Research Context:
+{context}
+
+Provide exactly these Markdown sections:
+## Summary
+## Technical Explanation
+## Key Findings
+## Practical Applications
+## Future Research Directions
+
+Do not invent claims, equations, citations, or findings not supported by the context.
+If the context is insufficient, state that clearly.
+"""
+    for model_name in models_to_try:
+        try:
+            response = client.models.generate_content(
+                model=model_name,
+                contents=prompt
+            )
+            if response and response.text:
+                return response.text
+        except Exception:
+            continue
+    return None
+
+
+def render_research_hub():
+    """Render the Research Hub search, grounded answer, sources, and context."""
+    st.markdown("## 📚 Research Hub")
+    st.caption("Search and interact with communication systems and ECE research papers.")
+
+    if research_load_error:
+        st.error("The Research Hub database is currently unavailable.")
+        st.info("Check that research/research_faiss.index and research/research_chunks.json are present.")
+        return
+
+    st.markdown("### Quick topics")
+    topics = [
+        "OFDM",
+        "Massive MIMO",
+        "OTFS",
+        "Full Duplex",
+        "Cell-Free Massive MIMO",
+        "Circuit AI"
+    ]
+    topic_columns = st.columns(3)
+    for index, topic in enumerate(topics):
+        with topic_columns[index % 3]:
+            st.button(
+                topic,
+                key=f"research_topic_{index}",
+                use_container_width=True,
+                on_click=set_research_query,
+                args=(topic,)
+            )
+
+    query = st.text_input(
+        "Ask a research question",
+        placeholder="What is OFDM Index Modulation?",
+        key="research_query"
+    ).strip()
+    if st.button("Search Research Hub", key="research_search_button"):
+        if not query:
+            st.warning("Enter a research question or choose a quick topic.")
+            return
+
+        with st.spinner("Searching research database..."):
+            results = search_research(query, k=10)
+            if not results:
+                st.info("No relevant research context was found.")
+                return
+            answer = generate_research_answer(query, results)
+
+        if not answer:
+            st.error("The Research Assistant is temporarily unavailable. Please try again later.")
+            return
+
+        st.markdown("### 🤖 Research Assistant")
+        st.markdown(answer)
+
+        unique_titles = []
+        for result in results:
+            if result["paper_title"] not in unique_titles:
+                unique_titles.append(result["paper_title"])
+        st.markdown("### 📄 Sources")
+        for title in unique_titles:
+            st.success(f"✓ {title}")
+
+        st.markdown("### 📚 Retrieved Context")
+        for result in results:
+            with st.expander(f"{result['paper_title']} · Page {result['page']}"):
+                st.markdown(f"**Paper:** {result['paper_title']}")
+                st.markdown(f"**Page:** {result['page']}")
+                st.write(result["text"])
 
 
 def render_aec_lab():
@@ -2435,11 +2852,53 @@ def render_aec_lab():
                 with st.chat_message("assistant"):
                     render_chat_response(answer, sources, show_context=False)
             else:
-                st.error("Gemini is currently unavailable. Please try again later.")
+                st.error("The AI assistant is currently unavailable. Please try again later.")
 
 
 def open_ask_ai_workspace():
     st.session_state.workspace_view = "Ask AI"
+
+
+WORKSPACE_PERMISSIONS = {
+    "public": [
+        "Overview",
+        "Learning Repository",
+        "Ask AI",
+        "Research Hub"
+    ],
+    "student": [
+        "Overview",
+        "Learning Repository",
+        "Ask AI",
+        "Research Hub",
+        "Communication Systems Lab",
+        "Analog Electronics Circuits Lab",
+        "Circuit Diagnosis",
+        "Submit Experiment"
+    ],
+    "technician": [
+        "Overview",
+        "Learning Repository",
+        "Ask AI",
+        "Research Hub",
+        "Communication Systems Lab",
+        "Analog Electronics Circuits Lab",
+        "Circuit Diagnosis",
+        "Technician Console"
+    ]
+}
+
+
+def get_allowed_workspaces():
+    """Return the workspaces allowed for the signed-in role."""
+    return WORKSPACE_PERMISSIONS.get(
+        st.session_state.get("user_role"),
+        WORKSPACE_PERMISSIONS["public"]
+    )
+
+
+def workspace_is_allowed(workspace):
+    return workspace in get_allowed_workspaces()
 
 
 def render_dashboard():
@@ -2456,16 +2915,9 @@ def render_dashboard():
             ],
             key="selected_lab"
         )
-        workspace_options = [
-            "Overview",
-            "Learning Repository",
-            "Ask AI",
-            "Communication Systems Lab",
-            "Analog Electronics Circuits Lab",
-            "Circuit Diagnosis"
-        ]
-        if st.session_state.user_role == "technician":
-            workspace_options.append("Technician Console")
+        workspace_options = get_allowed_workspaces()
+        if st.session_state.get("workspace_view") not in workspace_options:
+            st.session_state.workspace_view = workspace_options[0]
         view = st.radio("Workspace", workspace_options, key="workspace_view", label_visibility="collapsed")
         st.divider()
         if st.button("Logout", key="clean_logout", use_container_width=True):
@@ -2474,12 +2926,29 @@ def render_dashboard():
             st.rerun()
 
     st.markdown(f'''<div class="dashboard-hero"><div><span>YOUR LAB WORKSPACE</span><h1>Welcome back, {st.session_state.user_name}</h1><p>Continue learning with context from your laboratory manual.</p></div><div class="role-badge">{str(st.session_state.user_role).replace("_", " ").title()}</div></div>''', unsafe_allow_html=True)
+    if not workspace_is_allowed(view):
+        st.error("This workspace is not available for your account role.")
+        return
     if view == "Overview":
         st.markdown("### Your workspace")
-        cards = [("🔬", "Communication Systems Lab", "Explore procedures and ask manual-grounded questions."), ("⚡", "Analog Electronics Circuits", "Explore AEC experiments with manual-grounded answers."), ("🤖", "Ask AI", "Get clear answers with source context."), ("🎓", "Viva Preparation", "Use the lab manual to rehearse concepts."), ("🛠", "Fault Diagnosis", "Inspect electronics experiments with AI."), ("📚", "Research Hub", "Search knowledge across the lab repository.")]
-        for row in (cards[:3], cards[3:]):
+        all_cards = [
+            ("🔬", "Communication Systems Lab", "Explore procedures and ask manual-grounded questions."),
+            ("⚡", "Analog Electronics Circuits Lab", "Explore AEC experiments with manual-grounded answers."),
+            ("🤖", "Ask AI", "Get clear answers with source context."),
+            ("🎓", "Learning Repository", "Study published experiments and detailed guides."),
+            ("🛠", "Circuit Diagnosis", "Inspect electronics experiments with AI."),
+            ("📚", "Research Hub", "Search knowledge across the lab repository."),
+            ("📤", "Submit Experiment", "Send a new experiment to a technician for review."),
+            ("🧰", "Technician Console", "Review submissions and manage lab operations.")
+        ]
+        cards = [
+            card for card in all_cards
+            if card[1] in get_allowed_workspaces()
+            or (card[1] == "Learning Repository" and "Learning Repository" in get_allowed_workspaces())
+        ]
+        for row_start in range(0, len(cards), 3):
             cols = st.columns(3)
-            for col, (icon, title, text) in zip(cols, row):
+            for col, (icon, title, text) in zip(cols, cards[row_start:row_start + 3]):
                 with col:
                     st.markdown(f'<article class="feature-card clean dashboard-card"><i>{icon}</i><h3>{title}</h3><p>{text}</p></article>', unsafe_allow_html=True)
                     if title == "Ask AI":
@@ -2494,6 +2963,8 @@ def render_dashboard():
         render_learning_repository()
     elif view == "Ask AI":
         render_general_ask_ai()
+    elif view == "Research Hub":
+        render_research_hub()
     elif view == "Communication Systems Lab":
         render_communication_lab()
     elif view == "Analog Electronics Circuits Lab":
@@ -2503,6 +2974,8 @@ def render_dashboard():
             st.info("Select Analog Electronics Circuits above to open this laboratory.")
     elif view == "Technician Console":
         render_technician_console()
+    elif view == "Submit Experiment":
+        render_experiment_submission()
     else:
         render_circuit_diagnosis()
 
@@ -2517,7 +2990,7 @@ def render_communication_lab():
     with left:
         st.markdown(f'<div class="surface-card"><span>EXPERIMENT {experiment_number}</span><h2>{experiment["name"]}</h2><p>Use the sections below to work through the experiment in a structured format.</p></div>', unsafe_allow_html=True)
     with right:
-        st.markdown('<div class="surface-card"><span>KNOWLEDGE BASE</span><h3>Manual-grounded retrieval</h3><p>FAISS searches the loaded manual before Gemini responds.</p></div>', unsafe_allow_html=True)
+        st.markdown('<div class="surface-card"><span>KNOWLEDGE BASE</span><h3>Manual-grounded retrieval</h3><p>FAISS searches the loaded manual before the AI assistant responds.</p></div>', unsafe_allow_html=True)
     st.markdown("### Experiment guide")
     if procedure:
         render_structured_procedure(procedure)
@@ -2534,7 +3007,7 @@ def render_communication_lab():
             with st.chat_message("assistant"):
                 render_chat_response(answer, sources)
         else:
-            st.error("Gemini is currently unavailable. Please try again later.")
+            st.error("The AI assistant is currently unavailable. Please try again later.")
     with st.expander("Repository status"):
         st.write(f"Manual chunks loaded: {len(rag_chunks)}")
         st.write(f"FAISS vectors loaded: {faiss_index.ntotal}")
@@ -2661,7 +3134,7 @@ Keep the explanation simple for an electronics laboratory student.'''
                 with st.chat_message("assistant"):
                     render_chat_response(response.text, [])
             else:
-                st.error("Gemini is currently unavailable. Please try again later.")
+                st.error("The AI assistant is currently unavailable. Please try again later.")
     st.markdown("### Ask about this experiment")
     question = st.chat_input("Ask a question about this circuit…", key="electronics_chat")
     if question:
@@ -2707,7 +3180,7 @@ Answer clearly and simply.'''
             with st.chat_message("assistant"):
                 render_chat_response(response.text, [])
         else:
-            st.error("Gemini is currently unavailable. Please try again later.")
+            st.error("The AI assistant is currently unavailable. Please try again later.")
 
 
 render_dashboard()
@@ -3014,7 +3487,7 @@ Keep the explanation simple for an electronics laboratory student.
                 else:
 
                     st.error(
-                        "Gemini is currently unavailable. "
+                        "The AI assistant is currently unavailable. "
                         "Please try again later."
                     )
 
@@ -3123,7 +3596,7 @@ Answer clearly and simply.
                 else:
 
                     st.error(
-                        "Gemini is currently unavailable. "
+                        "The AI assistant is currently unavailable. "
                         "Please try again later."
                     )
 
@@ -3260,7 +3733,7 @@ else:
             else:
 
                 st.error(
-                    "Gemini is currently unavailable. "
+                    "The AI assistant is currently unavailable. "
                     "Please try again later."
                 )
 
